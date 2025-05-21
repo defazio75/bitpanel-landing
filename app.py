@@ -1,9 +1,9 @@
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template
 import os
 from dotenv import load_dotenv
 import csv
 
-app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')
+app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'supersecretdevkey')
 
 # === ROUTES ===
